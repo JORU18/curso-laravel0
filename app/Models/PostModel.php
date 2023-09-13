@@ -10,6 +10,8 @@ class PostModel extends Model
     // use HasFactory;
 
 
+    
+
 
 
 }

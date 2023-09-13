@@ -11,8 +11,9 @@ class TestController extends Controller
      */
     public function index()
     {
-
-        return view("dashboad.test.index",['name'=>'Andres','age'=> 34, 'html'=> '<h1>Titulo</h1>','array'=>[12,2,5,4,7]]);
+          $post = [12,2,5,4,7,'jonathan'];
+          $name= 'federico';
+        return view("dashboard.test.index",compact('post','name'));
         //
     }
 
