@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Dashboard\TestController;
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +16,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+  
+//     return view('welcome');
+
+// });
+
+Route::get('/', [TestController::class, 'index']);
+
+Route::get('/custom', function () {
+    $msj2="mensaje desde el servidor";
+    $data=['msj'=>$msj2, "edad" => 15];
+    return view('custom',$data);
+
+
 });
+
+Route::get('/escribeme', function(){
+
+    return view('welcome');
+}
+
+
+)->name('contacto');
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
