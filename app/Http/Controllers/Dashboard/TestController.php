@@ -12,7 +12,7 @@ class TestController extends Controller
     public function index()
     {
 
-        return view("dashboard.test.index",['name'=>'Andres','age'=> 34, 'html'=> '<h1>Titulo</h1>','array'=>[12,2,5,4,7]]);
+        return view("dashboad.test.index",['name'=>'Andres','age'=> 34, 'html'=> '<h1>Titulo</h1>','array'=>[12,2,5,4,7]]);
         //
     }
 

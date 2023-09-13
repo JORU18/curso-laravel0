@@ -43,7 +43,7 @@ no hay data
 
     <h1>{{$name}}</h1>
     <!-- {{$age}} -->
-    {!! $html !!}
+    {{-- {!! $html !!} --}}
     
 </body>
 </html>
